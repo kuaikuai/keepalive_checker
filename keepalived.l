@@ -44,7 +44,7 @@ static void yy_push_state(int);
 static int yy_top_state(void);
 int cond;
 
-int line_no = 1
+int line_no = 1;
 int debug   = 0;
 int brac_lev = 0;
 
@@ -148,6 +148,7 @@ SMTP_CHECK             		{ LEX_KEYWORD_TOKEN(yytext, SMTP_CHECK); }
 <vi>state			{ LEX_KEYWORD_TOKEN(yytext, STATE); }
 <vi>MASTER			{ LEX_KEYWORD_TOKEN(yytext, MASTER); }
 <vi>SLAVE			{ LEX_KEYWORD_TOKEN(yytext, SLAVE); }
+<vi>BACKUP                       { LEX_KEYWORD_TOKEN(yytext, BACKUP); }
 <vi>interface			{ LEX_KEYWORD_TOKEN(yytext, INTERFACE); }
 <vi>priority			{ LEX_KEYWORD_TOKEN(yytext, PRIORITY); }
 <vi>advert_int			{ LEX_KEYWORD_TOKEN(yytext, ADVERT_INT); }

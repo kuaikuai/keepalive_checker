@@ -332,7 +332,7 @@ virtualistmts: virtualistmt | virtualistmt virtualistmts { }
 virtualistmt: USE_VMAC				{ /* printf ( "%s",$<sym>1 ); */ } 
 |VMAC_XMIT_BASE					{ /* printf ( "%s",$<sym>1 ); */ } 
 |NATIVE_IPV6					{ /* printf ( "%s",$<sym>1 ); */ } 
-|STATE MASTER|BACKUP				{ /* printf ( "%s",$<sym>1 ); */ } 
+|STATE MASTER|STATE BACKUP				{ /* printf ( "%s",$<sym>1 ); */ } 
 |TRACK_INTERFACE STRING_LITERAL			{ }
 |TRACK_INTERFACE LB interface_list RB		{ }
 |TRACK_SCRIPT LB track_stmts RB			{ }
